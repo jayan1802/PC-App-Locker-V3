@@ -1,4 +1,4 @@
-name: Build PC App Locker V4 for Windows
+name: Build PC App Locker V4.1 for Windows
 
 on:
   workflow_dispatch:
@@ -22,11 +22,11 @@ jobs:
           pip install pyinstaller
       - name: Build standalone EXE
         run: |
-          pyinstaller --noconfirm --clean --windowed --onefile --name PCAppLockerV4 app_locker_v4.py
+          pyinstaller --noconfirm --clean --windowed --onefile --name PCAppLockerV4_1 app_locker_v4.py
       - name: Upload EXE artifact
         uses: actions/upload-artifact@v4
         with:
-          name: PCAppLockerV4-Windows
-          path: dist/PCAppLockerV4.exe
+          name: PCAppLockerV4_1_1-Windows
+          path: dist/PCAppLockerV4_1.exe
           if-no-files-found: error
           retention-days: 30
